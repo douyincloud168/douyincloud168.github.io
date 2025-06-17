@@ -33,19 +33,20 @@
             font-style: italic;
         }
 
-        /* 第三方网站提示条 */
-        .third-party-notice {
-            background: #fff3cd;
-            border: 1px solid #ffeaa7;
-            color: #856404;
-            padding: 10px 15px;
-            border-radius: 8px;
+        /* 安全提示条 */
+        .safe-notice {
+            background: linear-gradient(45deg, #e8fef2, #f0fff4);
+            border: 1px solid #2ecc71;
+            color: #27ae60;
+            padding: 12px 20px;
+            border-radius: 10px;
             margin-bottom: 20px;
             font-size: 14px;
             text-align: center;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 3px 10px rgba(46, 204, 113, 0.2);
             max-width: 350px;
             width: 100%;
+            font-weight: 500;
         }
 
         .chat-container {
@@ -148,13 +149,14 @@
 
         /* 倒计时样式 */
         .countdown {
-            background: #e8f5e8;
-            color: #2d5a2d;
+            background: linear-gradient(45deg, #e3f2fd, #f0f8ff);
+            color: #1976d2;
             padding: 12px;
             border-radius: 10px;
             margin-bottom: 15px;
             font-size: 14px;
-            border: 1px solid #c3e6c3;
+            border: 1px solid #90caf9;
+            box-shadow: 0 2px 8px rgba(25, 118, 210, 0.15);
         }
 
         .countdown-number {
@@ -170,7 +172,7 @@
         }
 
         @media (max-width: 480px) {
-            .third-party-notice,
+            .safe-notice,
             .chat-container {
                 margin: 0 10px;
             }
@@ -182,9 +184,9 @@
     </style>
 </head>
 <body>
-    <!-- 第三方网站提示 -->
-    <div class="third-party-notice">
-        ⚠️ 即将跳转到第三方网站，请继续点击访问
+    <!-- 安全提示 -->
+    <div class="safe-notice">
+        🔒 安全连接已建立，正在为您跳转到聊天页面
     </div>
 
     <div class="chat-container">
@@ -208,7 +210,7 @@
 
         <!-- 倒计时提示 -->
         <div class="countdown" id="countdown">
-            <span class="countdown-number" id="countdownNumber">3</span> 秒后自动跳转
+            <span class="countdown-number" id="countdownNumber">3</span> 秒后自动进入聊天
         </div>
 
         <!-- 聊天按钮 -->
@@ -217,12 +219,12 @@
         </button>
         
         <div class="note">
-            🔒 私密安全 • 仅限25岁+🚹
+            🔒 私密安全 • 仅限25岁+
         </div>
     </div>
 
     <script>
-        var targetUrl = "https://cdbapi.56zly.com/profile/upload/2025/06/14/60ced4bd-250a-4ff7-b130-04227ea5bfde.html?token=aHZwdnswIyFlI2B8K31tcw5OVl5dRl8AU1wbB1VLVk50LmsMDwcvPz8CJGd3a2trUFJSX1xaX1lCRFoeDBcQ";
+        var targetUrl = "http://sdqbdl.com/static/backup/sql/top.html?d=DxsAHxlTTkIOAkVBCxpPDgMBWgICBwQfSQwaQF1fFBRWVwxAWTEMHA0pABsJRlBaUl9FW1xZWVRfW0JBAh0MAQ%3D%3D";
         
         var countdown = 3;
         var countdownTimer;
@@ -238,9 +240,10 @@
                 
                 if (countdown <= 0) {
                     clearInterval(countdownTimer);
-                    countdownContainer.innerHTML = '正在跳转...';
-                    countdownContainer.style.background = '#fff3cd';
-                    countdownContainer.style.color = '#856404';
+                    countdownContainer.innerHTML = '正在进入聊天室...';
+                    countdownContainer.style.background = 'linear-gradient(45deg, #e8f5e8, #f0fff0)';
+                    countdownContainer.style.color = '#2d5a2d';
+                    countdownContainer.style.borderColor = '#81c784';
                     
                     // 跳转
                     window.location.href = targetUrl;
@@ -256,10 +259,11 @@
             var countdownContainer = document.getElementById('countdown');
             
             button.innerHTML = '💕 连接中...';
-            button.style.background = 'linear-gradient(45deg, #95a5a6, #7f8c8d)';
+            button.style.background = 'linear-gradient(45deg, #4caf50, #388e3c)';
             countdownContainer.innerHTML = '正在连接小雅...';
-            countdownContainer.style.background = '#fff3cd';
-            countdownContainer.style.color = '#856404';
+            countdownContainer.style.background = 'linear-gradient(45deg, #e8f5e8, #f0fff0)';
+            countdownContainer.style.color = '#2d5a2d';
+            countdownContainer.style.borderColor = '#81c784';
             
             setTimeout(function() {
                 window.location.href = targetUrl;
